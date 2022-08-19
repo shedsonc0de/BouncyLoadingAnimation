@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+.loader {
+    width: 120px;
+    height: 78px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.loader span {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.ball {
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: white;
+    animation: bounce .5s alternate infinite;
+}
+
+.ball:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.ball:nth-child(3) {
+    animation-delay: .32s;
+}
+
+@keyframes bounce {
+    from {
+        transform: scaleX(1.25);
+    }
+
+    to {
+        transform: translateY(-50px) scaleX(1);
+    }
+}
